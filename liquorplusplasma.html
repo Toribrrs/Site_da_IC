@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Neural Prediction Forest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Neural Prediction Forest</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="parameters.html">Parâmetros</a></li>
+            </ul>
+        </nav>
+        <a href="login.html">
+            <img id="minhaImagem" src="./Images/user.png" alt="Perfil">
+        </a>
+    </header>
+
+    <main id="main">
+        <h3>Liquor + Plasma</h3>
+        <p>Por favor, insira os dados abaixo:</p>
+        
+        <div class="dados">
+            <div class="coluna">
+                <ul class="proteinas">
+                    <li>Proteína 1</li>
+                    <li>Proteína 2</li>
+                    <li>Proteína 3</li>
+                    <li>Proteína 4</li>
+                    <li>Proteína 5</li>
+                    <li>Proteína 6</li>
+                </ul>
+            </div>
+            <div class="coluna">
+                <div class="inputs">
+                    <input type="number" placeholder="Insira os dados da Proteína 1">
+                    <input type="number" placeholder="Insira os dados da Proteína 2">
+                    <input type="number" placeholder="Insira os dados da Proteína 3">
+                    <input type="number" placeholder="Insira os dados da Proteína 4">
+                    <input type="number" placeholder="Insira os dados da Proteína 5">
+                    <input type="number" placeholder="Insira os dados da Proteína 6">
+                </div>
+            </div>
+        </div>
+        <div class="botoes">
+            <button id="limpar">Limpar</button>
+            <button id="calcular">Calcular</button>
+        </div>
+
+    </main>
+    
+    <footer>
+        <p>Todos os direitos reservados - &copy; 2023</p>
+        <p>Contato</p>
+    </footer>
+<!-- Script interno para limpar os campos de input -->
+<script>
+    function limparInputs() {
+        const inputs = document.querySelectorAll('.inputs input[type="number"]');
+        for (const input of inputs) {
+            input.value = '';
+        }
+    }
+    document.getElementById('limpar').addEventListener('click', limparInputs);
+
+    // botão calcular
+    var botao = document.getElementById("calcular");
+
+    botao.addEventListener("click", function() {
+    window.location.href = "results.html";
+    });
+
+
+    var imagem = document.getElementById("minhaImagem");
+    imagem.addEventListener("click", function() {
+        window.location.href = "login.html";
+    });
+   
+
+
+</script>
+
+<!-- Script externo -->
+<script src="script.js"></script>
+
+</body>

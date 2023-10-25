@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Neural Prediction Forest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Neural Prediction Forest</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="parameters.html">Parâmetros</a></li>
+            </ul>
+        </nav>
+        <a href="login.html">
+            <img id="minhaImagem" src="./Images/user.png" alt="Perfil">
+        </a>
+    </header>
+
+    <main>
+        <h3>Resultado:</h3>
+        <p id="prediction">A probabilidade do paciente desenvolver Alzheimer é <span id="result"></span>%</p>
+    </main>
+
+    <footer>
+        <p>Todos os direitos reservados - &copy; 2023</p>
+        <p>Contato</p>
+    </footer>
+
+    <script>
+        var imagem = document.getElementById("minhaImagem");
+        imagem.addEventListener("click", function() {
+          window.location.href = "login.html";
+        });
+      </script>
+
+    <script src="script.js"></script>
+</body>

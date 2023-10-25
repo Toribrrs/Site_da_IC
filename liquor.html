@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Neural Prediction Forest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Neural Prediction Forest</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="parameters.html">Parâmetros</a></li>
+            </ul>
+        </nav>
+        <a href="login.html">
+            <img id="minhaImagem" src="./Images/user.png" alt="Perfil">
+        </a>
+    </header>
+
+    <main id="main">
+        <h3>Liquor</h3>
+        <p>Por favor, insira os dados abaixo:</p>
+        
+        <div class="dados">
+            <div class="coluna">
+                <ul class="proteinas">
+                    <li>Proteína 1</li>
+                    <li>Proteína 2</li>
+                    <li>Proteína 3</li>
+                </ul>
+            </div>
+            <div class="coluna">
+                <div class="inputs">
+                    <input type="number" id="proteina1" placeholder="Insira os dados da Proteína 1">
+                    <input type="number" id="proteina2" placeholder="Insira os dados da Proteína 2">
+                    <input type="number" id="proteina3" placeholder="Insira os dados da Proteína 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="botoes">
+            <button id="limpar">Limpar</button>
+            <button id="calcular" onclick="calculatePrediction()">Calcular</button>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Todos os direitos reservados - &copy; 2023</p>
+        <p>Contato</p>
+    </footer>
+    
+    <!-- Script interno para limpar os campos de input -->
+    <script>
+        function limparInputs() {
+            const inputs = document.querySelectorAll('.inputs input[type="number"]');
+            for (const input of inputs) {
+                input.value = '';
+            }
+        }
+        document.getElementById('limpar').addEventListener('click', limparInputs);
+
+        // Função para calcular a previsão
+    function calculatePrediction() {
+        const proteina1 = parseFloat(document.getElementById('proteina1').value);
+        const proteina2 = parseFloat(document.getElementById('proteina2').value);
+        const proteina3 = parseFloat(document.getElementById('proteina3').value);
+
+
+
+        fetch(endpoint)
+        .then(response => response.json())
+        .then(data => {
+            // Redireciona para a página de resultados com o valor de previsão
+            window.location.href = `results.html?prediction=${data.prediction}`;
+        })
+        .catch(error => {
+            console.error('Erro ao calcular a previsão:', error);
+        });
+    }
+</script>
+    </script>
+</body>
+</html>

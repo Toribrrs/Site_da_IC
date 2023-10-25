@@ -1,0 +1,235 @@
+  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Roboto&display=swap');
+
+/* Estilo do header */
+.header {
+    background-color: #021056;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: space-between; /* Espaço entre o título e a imagem */
+    width: 100%;
+}
+
+/* Estilo do título do site */
+.header h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    margin: 0;
+    color: #fff;
+}
+
+/* Estilo do menu de navegação */
+.menu {
+    text-align: right; /* Alinha o menu à direita */
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do menu de navegação e imagem */
+.menu ul,
+.header img {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo dos itens do menu */
+.menu li {
+    display: inline-block; /* Coloca os itens lado a lado */
+    margin: 0 20px; /* Espaço entre os itens do menu */
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* Estilo da imagem */
+.header img {
+    width: 90px;
+    height: 90px;
+    padding-left: 20px; /* Adiciona um espaço à esquerda da imagem */
+    justify-self: end;
+}
+
+/* Estilo do body */
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FBF2FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Espaço entre o header, main e footer */
+    padding: 20px;
+    color: #021056;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+/* Estilo do main */
+main {
+    flex-grow: 1;
+    display: flex; /* Permite centralizar os elementos */
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+main h3{
+    margin-bottom: 10px;
+}
+
+/* Estilo dos botões */
+button {
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background-color: #021056;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 50px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #fff;
+    color: #021056;
+    border: 1px solid #021056;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #021056;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 0;
+    width: 100%; /* Ocupa toda a largura da página */
+}
+
+.dados {
+    display: flex;
+    justify-content: center; /* Alinha as colunas horizontalmente ao centro */
+    align-items: center; /* Alinha as colunas verticalmente ao centro */
+    margin-right: 200px;
+}
+
+/* Estilo da coluna das proteínas */
+.coluna {
+    display: inline-block;
+    vertical-align: top;
+    align-items: center;
+    width: 48%;
+}
+
+.proteinas {
+    list-style: none;
+    padding: 0;
+    font-size: 27px;
+    color: #021056;
+    margin-top: 10px;
+}
+
+.proteinas li {
+    margin-bottom: 19px;
+}
+
+/* Estilo da coluna dos inputs */
+.inputs {
+    width: 100%;
+    height: 60%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2%;
+}
+
+.inputs input[type="number"] {
+    width: 380px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #021056;
+    color: #fff;
+    display: block;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+/* Estilo do placeholder */
+.inputs input[type="number"]::placeholder {
+    color: #FBF2FF;
+}
+
+.barra-lateral {
+    width: 400px; /* Largura da barra lateral */
+    height: 100vh; /* Para ocupar toda a altura da janela de visualização */
+    position: fixed; /* Mantém a barra visível durante a rolagem */
+    top: 0;
+    right: -400px; /* A barra está inicialmente à direita da página */
+    background-color: #021056;
+    color: #fff;
+    padding: 20px;
+    transition: right 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra para efeito de profundidade */
+    z-index: 999; /* Certifica-se de que a barra lateral esteja acima do conteúdo da página */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo for maior que a altura da barra lateral */
+    display: none;
+    flex-direction: column;
+}
+
+/* Estilize o botão para fechar a barra lateral */
+#fechar-barra {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    width: 60px;
+}
+
+.barra-lateral h2, .barra-lateral p {
+    color: #fff;
+}
+
+.barra-lateral p:last-child {
+    margin-bottom: 20px;
+}
+
+/* Melhore a seta indicando que o mouse deve ser colocado sobre a barra */
+.barra-lateral::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -30px; /* Posiciona a seta à direita da barra */
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #021056; /* Cor da seta em azul */
+    transform: translateY(-50%);
+}
+
+/* Quando o mouse passar sobre a barra lateral, torne-a visível */
+.barra-lateral:hover {
+    right: 0;
+}
